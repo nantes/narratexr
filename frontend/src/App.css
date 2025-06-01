@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 15px;
+  color: white;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 20px;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.loading, .error-container {
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.error-container {
+  color: red;
+  border: 1px solid red;
+  background-color: #ffe0e0;
+  border-radius: 5px;
+}
+
+.error-container button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error-container button:hover {
+    background-color: #c9302c;
+}
+
+.scene-placeholder {
+  min-height: 200px; /* Placeholder for Scene.js visuals */
+  background-color: #eee;
+  border: 1px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.narrative-text {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  min-height: 60px;
+  line-height: 1.6;
+}
+
+.npc-dialogue {
+  background-color: #fff8e1; /* Light yellow for dialogue */
+  border-left: 4px solid #ffc107; /* Amber accent */
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+}
+
+.npc-dialogue strong {
+  font-style: normal;
+}
+
+.inventory {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e9f5ff;
+  border: 1px solid #b3d7ff;
+  border-radius: 4px;
+}
+
+.inventory h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #0056b3;
+}
+
+.inventory ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.inventory li {
+  padding: 3px 0;
+}
+
+.choices button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.choices button:hover {
+  background-color: #0056b3;
+}
+
+.choices button:active {
+  background-color: #004085;
+}
+
+.controls {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.controls button {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #5a6268;
+}
+
+.controls button.photo-button {
+    background-color: #28a745; /* Green color for photo button */
+    margin-left: 10px;
+}
+
+.controls button.photo-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.controls button.xr-button {
+    background-color: #17a2b8; /* Teal color for XR button */
+    margin-left: 10px;
+}
+
+.controls button.xr-button:hover {
+    background-color: #138496; /* Darker teal on hover */
+}

@@ -1,0 +1,85 @@
+{
+  "scenes": {
+    "start": {
+      "text": "You find yourself at a crossroads. A path leads left into a dark forest, and another leads right towards a distant, shimmering city.",
+      "choices": [
+        {"text": "Go left into the forest", "target": "forest_entrance"},
+        {"text": "Go right towards the city", "target": "city_gates"}
+      ]
+    },
+    "forest_entrance": {
+      "text": "The forest is eerie and silent. You see a Mysterious Old Man leaning against a tree. He looks at you expectantly. You also hear a faint rustling in the bushes nearby.",
+      "npc": {
+        "name": "Mysterious Old Man",
+        "defaultDialogue": "The old man coughs, 'Well, don't just stand there gawking. What do you want?'",
+        "states": [
+          {
+            "id": "knows_mushroom_secret",
+            "dialogue": "The old man's eyes widen. 'Ah, a glowing mushroom! A rare find indeed. It is said to illuminate the path to hidden treasures. Perhaps you should explore the city more thoroughly now.'",
+            "condition": {"item": "glowing_mushroom", "present": true}
+          },
+          {
+            "id": "default",
+            "dialogue": "The old man sighs, 'Lost, are we? This forest is no place for the unprepared. The city might be more your speed, or perhaps you're brave enough to see what hides in the shadows here.'",
+            "condition": {"item": "glowing_mushroom", "present": false}
+          }
+        ]
+      },
+      "choices": [
+        {"text": "Approach the Old Man", "target": "talk_to_old_man"},
+        {"text": "Investigate the rustling", "target": "deep_forest"},
+        {"text": "Go right towards the city (from forest)", "target": "city_gates"},
+        {"text": "Return to crossroads", "target": "start"}
+      ]
+    },
+    "talk_to_old_man": {
+      "text": "You approach the Mysterious Old Man.",
+      "isDynamicScene": true,
+      "dynamicSource": "forest_entrance",
+      "choices": [
+        {"text": "Ask about the forest", "target": "old_man_forest_talk"},
+        {"text": "Ask about the city", "target": "old_man_city_talk"},
+        {"text": "Leave him be", "target": "forest_entrance"}
+      ]
+    },
+    "old_man_forest_talk": {
+        "text": "The old man says, 'The forest is ancient and holds many secrets. Only the observant find them.' He glances at the bushes where you heard the rustling.",
+        "choices": [
+            {"text": "Thanks, I'll look around.", "target": "forest_entrance"}
+        ]
+    },
+    "old_man_city_talk": {
+        "text": "The old man chuckles, 'The city? A beacon of progress, they say. But not all that glitters is gold. Some say it's too bright to see the stars there.'",
+        "choices": [
+            {"text": "Interesting point. I'll head back for now.", "target": "forest_entrance"}
+        ]
+    },
+    "city_gates": {
+      "text": "The city gates are massive and ornate, but closed. A small, unassuming door is carved into the side.",
+      "choices": [
+        {"text": "Try the small door", "target": "city_market"},
+        {"text": "Go left into the forest (from city)", "target": "forest_entrance"},
+        {"text": "Return to crossroads", "target": "start"}
+      ]
+    },
+    "deep_forest": {
+        "text": "You push aside the bushes and find a small, glowing mushroom. It pulses with a soft light.",
+        "choices": [
+            {"text": "Take the mushroom and go back", "target": "forest_entrance"}
+        ],
+        "addItem": "glowing_mushroom"
+    },
+    "city_market": {
+        "text": "The small door opens into a bustling marketplace. You are overwhelmed by the sights and sounds. You decide this is too much for one day and head back.",
+        "choices": [
+            {"text": "Return to city gates", "target": "city_gates"}
+        ]
+    }
+  },
+  "initialScene": "start",
+  "npcs": {
+    "Mysterious Old Man": {
+      "mood": "neutral"
+    }
+  }
+}
