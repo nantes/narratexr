@@ -48,16 +48,16 @@
     background-color: #c9302c;
 }
 
-.scene-placeholder {
-  min-height: 200px; /* Placeholder for Scene.js visuals */
-  background-color: #eee;
-  border: 1px dashed #aaa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  border-radius: 4px;
-}
+/* .scene-placeholder { */
+  /* min-height: 200px; Placeholder for Scene.js visuals */
+  /* background-color: #eee; */
+  /* border: 1px dashed #aaa; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* margin-bottom: 20px; */
+  /* border-radius: 4px; */
+/* } */ /* This class is no longer used in App.js */
 
 .narrative-text {
   background-color: #fff;

@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path'); // Corrected typo
+// const path = require('path'); // path module was not used
 const game = require('./game/gameState');
 
 const app = express();
@@ -68,7 +68,11 @@ app.post('/api/game/reset', (req, res) => {
 //   }
 // });
 
+// Export app for testing purposes, but only start listening if not in test mode
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Narrative engine server running on http://localhost:${PORT}`);
+  });
+}
 
-app.listen(PORT, () => {
-  console.log(`Narrative engine server running on http://localhost:${PORT}`);
-});
+module.exports = app; // Export the app

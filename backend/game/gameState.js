@@ -119,11 +119,11 @@ function chooseNextScene(choiceIndex) {
   if (newSceneData.addItem) {
     if (!playerInventory.includes(newSceneData.addItem)) {
       playerInventory.push(newSceneData.addItem);
-      console.log(`Item added to inventory: ${newSceneData.addItem}`);
+      // console.log(`Item added to inventory: ${newSceneData.addItem}`); // Reduced verbosity
     }
   }
 
-  console.log("Scene updated to:", currentSceneId);
+  // console.log("Scene updated to:", currentSceneId); // Reduced verbosity
   return true;
 }
 
@@ -132,13 +132,13 @@ function chooseNextScene(choiceIndex) {
 
 function saveGameState() {
   // This could write currentSceneId and playerInventory to a file
-  console.log("Game state save requested (not implemented for persistence yet).");
+  // console.log("Game state save requested (not implemented for persistence yet)."); // Reduced verbosity
   // For now, it's just in memory.
 }
 
 function loadSavedGameState() {
   // This could read from a file
-  console.log("Load saved game state requested (not implemented for persistence yet).");
+  // console.log("Load saved game state requested (not implemented for persistence yet)."); // Reduced verbosity
   // For now, it just ensures game data is loaded (which happens at start).
   if (!scenesData) {
     return loadGameData();

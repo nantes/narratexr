@@ -32,7 +32,7 @@ const SceneDisplay = ({ sceneId, npc, itemSprite }) => {
           </div>
         )}
         {itemSprite && (
-          <div className="sprite-placeholder">
+          <div className="sprite-placeholder item-sprite"> {/* Corrected class name */}
             {/* In a real game: <img src={`/images/items/${itemSprite}.png`} alt={itemSprite} /> */}
             <p>Item: {itemSprite}</p>
           </div>
