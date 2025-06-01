@@ -59,7 +59,3 @@ This project is an Interactive Narrative Engine with Dynamic AI, Visual Elements
 - NPC with conditional dialogue.
 - "Take Photo" feature to capture screenshots.
 - Experimental WebXR (AR) integration.
-
-## Known Issues
-
-- **API Integration Tests:** The integration tests for the API endpoints (`backend/__tests__/api.test.js`) are written but could not be executed during development due to an environment-specific issue with resolving the `supertest` module. Unit tests for the core game logic in `gameState.js` are passing.
